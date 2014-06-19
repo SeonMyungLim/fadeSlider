@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery Simple Fade SlideShow by Pascal Bajorat</title>
+<link rel="stylesheet" type="text/css" href="demoStyleSheet.css" />
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="fadeSlideShow.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+	jQuery('#slideshow').fadeSlideShow({
+width: 640, // default width of the slideshow
+height: 480, // default height of the slideshow
+speed: 'slow', // default animation transition speed
+interval: 1000, // default interval between image change
+PlayPauseElement: false, // default css id for the play / pause element
+NextElement: false, // default id for next button
+NextElementText: false, // default text for next button
+PrevElement: false, // default id for prev button
+PrevElementText: false, // default text for prev button
+ListElement: 'fssList', // default id for image / content controll list
+ListLi: 'fssLi', // default class for li's in the image / content controll 
+ListLiActive: 'fssActive', // default class for active state in the controll list
+addListToId: false, // add the controll list to special id in your code - default false
+allowKeyboardCtrl: true, // allow keyboard controlls left / right / space
+autoplay: true // autoplay the slideshow
+
+  });
+});
+</script>
+
+<style type="text/css">
+  .test {
+    margin-top: -50px;
+    z-index: 999;
+    color: white;
+    /*position: relative;*/
+  }
+
+</style>
+
+</head>
+
+<body>
+<div id="top">
+	<h1>Simple Fade SlideShow <span>v.2.2 by <a href="http://www.pascal-bajorat.com" target="_blank" title="Visit Pascal Bajorat's Website">Pascal Bajorat</a></span></h1>
+</div>
+<div id="slideshowWrapper">
+    <div id="slideshow">
+        <div><img src="images/4.jpg" width="640" height="480" border="0" alt="" /><div class="test" style="margin-top:-50px;">some sfasdfadfasfsafcontents</div></div> <!-- This is the last image in the slideshow -->
+        <div><img src="images/3.jpg" width="640" height="480" border="0" alt="" /><div class="test" style="margin-top:-50px;">some cdsafasdfdasfdasfontents</div></div>
+        <div><img src="images/2.jpg" width="640" height="480" border="0" alt="" /><div class="test" style="margin-top:-50px;">some contenasdfasdfsadfsafts</div></div>
+        <div><img src="images/1.jpg" width="640" height="480" border="0" alt="" /><div class="test" style="margin-top:-50px;">some contsafasfadfadsfents</div></div> <!-- This is the first image in the slideshow -->
+    </div><br clear="all" />
+</div>
+
+</body>
+</html>
